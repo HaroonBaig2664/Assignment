@@ -19,7 +19,7 @@ if __name__=="__main__":
     print(client)
     db=client['airline_delayDB']
     collection=db['flights']
-    read_flight('D:\python trianings\Assignment 4 on Pymongo_Flight_Delay\Flights_Delay.csv')
+    read_flight('C:\Python')
 
 # b). Average arrival delay caused by airlines
 avg_delay=collection.aggregate([   {'$group': {'_id':'$AIRLINE','total_avg': { '$avg':'$ARRIVAL_DELAY'}}}  ])                              
